@@ -1,5 +1,5 @@
 import 'regenerator-runtime/runtime';
-import MainPage from './pages/main';
+// import MainPage from './pages/main';
 import MainLayout from './layouts/mainLayout';
 import { Routes, Route } from 'react-router-dom';
 import ParticleBg from './components/particle/ParticleBg';
@@ -10,7 +10,7 @@ function App() {
       <ParticleBg />
       <MainLayout>
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<ExplorePage />} />
           <Route path="/explore" element={<ExplorePage />} />
           <Route path="*" element={<div>not found</div>} />
         </Routes>

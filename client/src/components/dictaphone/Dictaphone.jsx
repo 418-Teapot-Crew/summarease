@@ -4,7 +4,7 @@ import SpeechRecognition, {
 import { useState } from 'react';
 
 import { FaPlay } from 'react-icons/fa';
-import { FaCirclePause } from 'react-icons/fa6';
+import { FaPause } from 'react-icons/fa';
 
 const Dictaphone = () => {
   const [recording, setRecording] = useState(false);
@@ -18,33 +18,31 @@ const Dictaphone = () => {
 
   return (
     <>
-      <div className="container-test">
-        <div className="main-content">{transcript}</div>
+      <div className="flex flex-col justify-center items-center gap-10 mt-10">
+        <div className="bg-white h-[300px] w-[600px] border border-blood text-blood p-3 spacin">
+          {transcript}
+        </div>
 
         <div className="btn-style">
           {!recording ? (
-            <button
-              className="btn-class"
+            <FaPlay
+              className="text-4xl text-blood"
               onClick={() => {
-                setRecording(true);
                 SpeechRecognition.startListening({
                   continuous: true,
                   language: 'tr-TR',
                 });
+                setRecording(true);
               }}
-            >
-              <FaPlay className="text-4xl" />
-            </button>
+            />
           ) : (
-            <button
-              className="btn-class"
+            <FaPause
+              className="text-4xl text-blood"
               onClick={() => {
-                setRecording(false);
                 SpeechRecognition.stopListening();
+                setRecording(false);
               }}
-            >
-              <FaCirclePause className="text-4xl" />
-            </button>
+            />
           )}
         </div>
       </div>

@@ -5,7 +5,7 @@ const MainLayout = ({ children }) => {
   return (
     <div className="font-poppins">
       <Header />
-      <div className="px-24">{children}</div>
+      <div className="px-24 transform translate-y-14">{children}</div>
     </div>
   );
 };

@@ -7,6 +7,9 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         dancing: ['Dancing Script', 'cursive'],
       },
+      colors: {
+        blood: '#C2021D',
+      },
     },
   },
   plugins: [],
