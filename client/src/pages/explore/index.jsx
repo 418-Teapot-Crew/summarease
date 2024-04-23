@@ -1,10 +1,15 @@
+// import Dictaphone from '../../components/dictaphone/Dictaphone';
 import { useState } from 'react';
-import Dictaphone from '../../components/dictaphone/Dictaphone';
+import FileUpload from '../../components/fileUpload/FileUpload';
+import Recording from '../../components/recording/Recording';
+import { TbPlayerTrackNextFilled } from 'react-icons/tb';
+import { useNavigate } from 'react-router-dom';
 
 const ExplorePage = () => {
   const [tab, setTab] = useState('recording');
+  const navigate = useNavigate();
   return (
-    <div className="h-[90vh] flex justify-center items-center flex-col">
+    <div className="h-[90vh] flex justify-center items-center flex-col font-poppins">
       <div className="flex gap-3 w-[600px]">
         <div
           onClick={() => setTab('recording')}
@@ -23,7 +28,14 @@ const ExplorePage = () => {
           Dosya
         </div>
       </div>
-      <Dictaphone />
+      {tab === 'recording' ? <Recording /> : <FileUpload />}
+      <div
+        className="flex gap-2 items-center border-2 border-blood p-3  text-blood bg-white hover:text-white hover:bg-blood transition-all duration-200 cursor-pointer mt-10"
+        onClick={() => navigate('/input')}
+      >
+        <span className="font-semibold">Sonraki Adım</span>
+        <TbPlayerTrackNextFilled className="" />
+      </div>
     </div>
   );
 };
