@@ -31,10 +31,10 @@ const MainPage = () => {
         className="flex flex-1 flex-col gap-4 text-center justify-center  text-black "
       >
         <div className="m-0 font-extrabold text-6xl flex flex-col gap-3">
-          <span className="text-[#C2021D]">Meethelper</span>{' '}
+          <span className="text-[#C2021D]">Summarease</span>{' '}
           {/* <span className="text-[#000000]">Havelsan MAIN</span> */}
         </div>
-        {/* <div className="font-light italic text-2xl">Speech to Text Power</div> */}
+        <div className=" text-2xl">Verileri Özetleyin, Bilgileri Odaklayın</div>
         <div className="flex flex-row items-center justify-center">
           <NavLink
             to={'/explore'}

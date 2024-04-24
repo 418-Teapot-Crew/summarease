@@ -1,10 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 
 import { FaPlay } from 'react-icons/fa';
 import { FaPause } from 'react-icons/fa';
 
-const Recording = () => {
-  const [time, setTime] = useState(0);
+const Recording = ({ time, setTime }) => {
   const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {

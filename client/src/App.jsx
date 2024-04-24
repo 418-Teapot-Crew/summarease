@@ -11,9 +11,9 @@ function App() {
       <ParticleBg />
       <MainLayout>
         <Routes>
-          <Route path="/" element={<ExplorePage />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="/input" element={<InputPage />} />
-          <Route path="/home" element={<MainPage />} />
+          <Route path="/explore" element={<ExplorePage />} />
           <Route path="*" element={<div>not found</div>} />
         </Routes>
       </MainLayout>
