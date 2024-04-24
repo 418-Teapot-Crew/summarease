@@ -14,7 +14,7 @@ const InputPage = () => {
     setTimeout(() => {
       setLoading(false);
       window.open(
-        'http://localhost:5173/pdfs/pazarlama-stratejisi.pdf',
+        'http://localhost:5173/pdfs/pazarlama-stratejisi-havelsan.pdf',
         '_blank'
       );
     }, 2000);
@@ -49,7 +49,7 @@ const InputPage = () => {
             <textarea
               rows={10}
               className="w-full border border-blood p-3 rounded"
-              placeholder="Dikkate alınması gereken noktalar..."
+              placeholder="Özet Başlıkları"
               value={content}
               onChange={(e) => setContent(e.target.value)}
             />
