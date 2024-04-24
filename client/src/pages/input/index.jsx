@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { TbPlayerTrackNextFilled } from 'react-icons/tb';
 import Loading from '../../components/loading/Loading';
+import { useNavigate } from 'react-router-dom';
 
 const InputPage = () => {
   const [loading, setLoading] = useState(false);
@@ -9,6 +10,7 @@ const InputPage = () => {
   const [content, setContent] = useState('');
   const [date, setDate] = useState('');
   const [title, setTitle] = useState('');
+  const navigation = useNavigate();
   const handleClickGetDocument = () => {
     setLoading(true);
     setTimeout(() => {
@@ -17,6 +19,7 @@ const InputPage = () => {
         'http://localhost:5173/pdfs/pazarlama-stratejisi-havelsan.pdf',
         '_blank'
       );
+      navigation('/');
     }, 2000);
   };
 
@@ -35,7 +38,7 @@ const InputPage = () => {
             <input
               type="text"
               className="w-full border border-blood p-3 rounded-l outline-none"
-              placeholder="Başlık"
+              placeholder="Konu"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />

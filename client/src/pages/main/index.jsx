@@ -12,13 +12,13 @@ const MainPage = () => {
     enter: { opacity: 1, x: 0, y: 0 },
   };
   return (
-    <div className="h-[90vh] relative flex items-center justify-between translate-y-10">
+    <div className="h-[90vh] relative flex items-center justify-center translate-y-10 pr-20">
       <motion.div
         variants={earthVariant}
         initial="hidden"
         animate="enter"
         transition={{ type: 'linear', delay: 0.7 }}
-        className="h-[90vh]  flex-1 w-full"
+        className="h-[75vh]  flex-1 w-auto"
       >
         <Earth />
       </motion.div>
@@ -39,7 +39,7 @@ const MainPage = () => {
             alt=""
           />
         </div>
-        <div className=" text-2xl tracking-widest underline text-blood">
+        <div className="text-2xl tracking-widest text-blood">
           Verileri Özetleyin, Bilgileri Odaklayın
         </div>
         <div className="flex flex-row items-center justify-center">
